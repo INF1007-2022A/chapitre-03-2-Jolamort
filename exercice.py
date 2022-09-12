@@ -5,7 +5,7 @@ def dissipated_power(voltage, resistance):
 	# TODO: Calculer la puissance dissipée par la résistance.
 	return 0
 
-def orthogonal(v1, v2):
+#def orthogonal(v1, v2):
 	# TODO: Retourner vrai si les vecteurs sont orthogonaux, faux sinon.
 	print("x de v1")
 	v1[0] = input() # Pour accéder au X
@@ -46,7 +46,9 @@ def format_base(value, base, digit_letters):
 	result = ""
 	abs_value = abs(value)
 	while abs_value != 0:
-		pass
+		smallest_digit = abs_value % 10
+		result += digit_letters[smallest_digit]
+		abs_value = abs_value // 10
 	if value < 0:
 		# TODO: Ne pas oublier d'ajouter '-' devant pour les nombres négatifs.
 		pass
@@ -55,7 +57,7 @@ def format_base(value, base, digit_letters):
 
 if __name__ == "__main__":
 	print(dissipated_power(69, 420))
-	print(orthogonal((1, 1), (-1, 1)))
+	#print(orthogonal((1, 1), (-1, 1)))
 	print(average([1, 4, -2, 10]))
 	print(bills(137))
 	print(format_base(-42, 16, "0123456789ABCDEF"))
