@@ -7,8 +7,18 @@ def dissipated_power(voltage, resistance):
 
 def orthogonal(v1, v2):
 	# TODO: Retourner vrai si les vecteurs sont orthogonaux, faux sinon.
-	v1[0] # Pour accéder au X
-	v1[1] # Pour accéder au Y
+	print("x de v1")
+	v1[0] = input() # Pour accéder au X
+	print("y de v1")
+	v1[1] = input() # Pour accéder au Y
+	print("x de v1")
+	v2[0] = input() # Pour accéder au X
+	print("y de v1")
+	v2[1] = input() # Pour accéder au Y
+	if (v1[0] * v2[0]) == -(v1[1]*v2[1]):
+		print("ortho")
+	else:
+		print("pas ortho")
 	pass
 
 def average(values):
